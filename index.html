@@ -17,18 +17,18 @@
     <div class="wrapper">
       <div id="start-screen" class="start">
         <h1>Coding Quiz Challenge</h1>
-        <p>
+        <p class="hide">
           Try to answer the following code-related questions within the time
           limit. Keep in mind that incorrect answers will penalize your
           score/time by ten seconds!
         </p>
-        <button id="start">Start Quiz</button>
-      </div>
-
-      <div id="questions" class="hide">
+        <button id="start">Start Quiz</button><!--  when button pressed show first quiz screen -->
+      </div> 
+     
+      <section id="questions" class="show">
         <h2 id="question-title"></h2>
-        <div id="choices" class="choices"></div>
-      </div>
+      <!-- <div id="choices" class="choices"></div> redundnant div replaced with an ordered list -->
+      </section>
 
       <div id="end-screen" class="hide">
         <h2>All done!</h2>
