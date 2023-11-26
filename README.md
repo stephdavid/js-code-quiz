@@ -17,6 +17,10 @@ Challenge - build a timed coding quiz with multiple-choice questions which will 
 
 * Five sets of questions have been created. TODO: code something to remove/add hide class 
 
+* The removeAttribute() method works - will need to be able to show and hide as part of the logic process.
+
+* For a bit of a change, however, time to fix the button and do some hover effects. 
+
 ### Code Logic - What are we trying to do
 
 1. A quiz with a timer
@@ -48,6 +52,9 @@ https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute<br>
 
 HTML DOM Element setAttribute()
 https://www.w3schools.com/jsref/met_element_setattribute.asp<br>
+
+Element: removeAttribute() method
+https://developer.mozilla.org/en-US/docs/Web/API/Element/removeAttribute<br>
 
 
 
