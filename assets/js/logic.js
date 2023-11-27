@@ -18,7 +18,7 @@ function showFirstQuestionPage() {
 
     quizQuestions1.setAttribute("class", "show");// n.b. quizQuestions1 is a global variable
 
-    ol5.setAttribute("class", "buttons"); // strange but 5 for 1
+    ol5.setAttribute("class", "buttons"); // another global variable and strange but 5 is 1 etc.
 }
 
 function showNextQuestionPage() {

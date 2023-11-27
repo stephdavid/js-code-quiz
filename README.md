@@ -36,6 +36,8 @@ TO BE REVISTED: Will try to programmically create them using a css counter with 
 
 * For some reason the question titles need to be in reverse order in the code - otherwise the highest number will appear on the screen (and not be associated with the options)
 
+* Keeping in mind the reverse order issue, by hiding all 5 ordered lists in questions.js, then in the showFirstQuestionPage() function in the logic.js page, removing hidden whensetting the class of the first ordered list (using ol5).
+
 ### Code Logic - What are we trying to do
 
 1. A quiz with a timer
