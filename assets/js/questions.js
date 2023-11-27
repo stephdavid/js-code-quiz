@@ -4,19 +4,19 @@ const quizQuestions2 = document.getElementById('questions');
 const quizQuestions3 = document.getElementById('questions');
 const quizQuestions4 = document.getElementById('questions');
 const quizQuestions5 = document.getElementById('questions');
-
-var hideMe = document.querySelector(".show");
+/*
+const hideMe = document.querySelector(".show");
 hideMe.setAttribute("class", "hide");
 
-var hideButton = document.getElementById("start");
+const hideButton = document.getElementById("start");
 hideButton.setAttribute("class", "hide");
 
-quizQuestions1.removeAttribute("class");
+const showQuestion1 = quizQuestions1.removeAttribute("class");
 quizQuestions2.removeAttribute("class");
 quizQuestions3.removeAttribute("class");
 quizQuestions4.removeAttribute("class");
 quizQuestions5.removeAttribute("class");
-
+*/
 // get the heading (h2) element and create the five quiz questions as values
 const questionTitle1 = document.getElementById("question-title");
 questionTitle1.textContent = "Commonly used data types do not include:";
