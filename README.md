@@ -25,7 +25,12 @@ Challenge - build a timed coding quiz with multiple-choice questions which will 
 
 * I amended some code that should have been the .after() method (as a sibling) rather than the appendChild() method which inserts an element into another element, not what I wanted in this case.
 
+* Monday morning. For some reason, the ordered list numbers fall outside the buttons. 
+![stange button-numbers behaviour ](stange-nums.png)
 
+TODO: Will try to programmically create them using a css counter with the ::marker pseudo-element -  CSS Lists, Markers, And Counters https://www.smashingmagazine.com/2019/07/css-lists-markers-counters/.
+  
+* Commence the logic bit. Game plan: in logic.js, initiate the quiz and display the first question.
 
 ### Code Logic - What are we trying to do
 
