@@ -21,6 +21,12 @@ Challenge - build a timed coding quiz with multiple-choice questions which will 
 
 * For a bit of a change, however, time to fix the button and do some hover effects. 
 
+* Making the start button bigger and bright was easy enough, it was rather involved making the list items look like buttons but I did it eventually. #
+
+* I amended some code that should have been the .after() method (as a sibling) rather than the appendChild() method which inserts an element into another element, not what I wanted in this case.
+
+
+
 ### Code Logic - What are we trying to do
 
 1. A quiz with a timer
@@ -56,5 +62,8 @@ https://www.w3schools.com/jsref/met_element_setattribute.asp<br>
 Element: removeAttribute() method
 https://developer.mozilla.org/en-US/docs/Web/API/Element/removeAttribute<br>
 
+Create buttons from UL elements
+https://readlearncode.com/code-and-stuff/creating-buttons-from-ul-element/<br>
 
-
+Element: after() method
+https://developer.mozilla.org/en-US/docs/Web/API/Element/after<br>
