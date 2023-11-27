@@ -32,6 +32,10 @@ TO BE REVISTED: Will try to programmically create them using a css counter with 
   
 * Commence the logic bit. Game plan: in logic.js, initiate the quiz and display the first question.
 
+* Successfully coded the first event listener - when start button clicked, the start paragraph and button elements are removed and the first question and choices is displayed. Still some way to go.
+
+* For some reason the question titles need to be in reverse order in the code - otherwise the highest number will appear on the screen (and not be associated with the options)
+
 ### Code Logic - What are we trying to do
 
 1. A quiz with a timer
