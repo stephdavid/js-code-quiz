@@ -63,8 +63,6 @@ ol4.setAttribute("id", "buttons");
 ol5.setAttribute("id", "buttons");
 */
 
-// ok
-
 // Append the ordered lists of choices to their respective question titles
 
 // Insert the ordered lists after their respective titles 
@@ -128,10 +126,10 @@ anchor1d.href = "#";
 
 // Create the text content options
 // e.g const textnode = document.createTextNode("Water");
-const choice1a = document.createTextNode("strings");
-const choice1b = document.createTextNode("booleans");
-const choice1c = document.createTextNode("alerts"); // Correct! alerts are functions - the rest are primitive data types
-const choice1d = document.createTextNode("number");
+const choice1a = document.createTextNode("1. strings");
+const choice1b = document.createTextNode("2. booleans");
+const choice1c = document.createTextNode("3. alerts"); // Correct! alerts are functions - the rest are primitive data types
+const choice1d = document.createTextNode("4. numbers");
 /*
 const choice2a = document.createTextNode("quotes");
 const choice2b = document.createTextNode("curly brackets");

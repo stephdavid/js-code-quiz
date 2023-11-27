@@ -33,35 +33,29 @@ button:hover {
   box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #9529b3 0 -3px 0 inset;
 }
 
-/*.choices button {
-  display: block;
-} */
-
 .buttons li {
-  text-align: center;
+  list-style: none;
   width: 50%;
-  margin: 15px;
+  margin: 15px 0;
   cursor: pointer;
   font-size: 120%;
-  background-image: radial-gradient(100% 100% at 100% 0, #865ec2 0, #9529b3 100%);
-  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  background-color:#351c75;
   border-radius: 5px;
   color: white;
   border: 0;
-  padding: 25px 15px;
   transition: background-color 0.1s;
-}
+  padding: 0;
+  }
 
 .buttons li a {
   text-decoration: none;
   color: #fff;
   display: block;
+  padding: 25px;
 }
 
 .buttons li a:hover {
-  text-decoration: none;
-  background-color: #8570a5;
-  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #9529b3 0 -3px 0 inset;
+  background-color: #bd60e7;
 }
 
 input[type="text"] {
