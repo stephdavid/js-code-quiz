@@ -1,21 +1,21 @@
 
-
+// This script is where the quiz questions are declared and initialized, and where question section structural elements are programically created and added to the html page
 
 let questions = [
     {
         question: "Commonly used data types do not include:",
-        answerChoices: ["strings", "booleans", "alerts", "numbers" ],
+        answerChoices: ["strings", "booleans", "alerts", "numbers"],
         correctChoice: "alerts"
     },
-    
+
     {
-        question: "The condition in an if/else statement is enclosed with __________.", 
+        question: "The condition in an if/else statement is enclosed with __________.",
         answerChoices: ["quotes", "curly brackets", "parentheses", "square brackets"],
         correctChoice: "parentheses"
     },
-    
+
     {
-        question: "Arrays in JavaScript can be used to store __________.", 
+        question: "Arrays in JavaScript can be used to store __________.",
         answerChoices: ["numbers and strings", "other arrays", "booleans", "all of the above"],
         correctChoice: "all of the above"
     },
@@ -34,11 +34,7 @@ let questions = [
 ]
 
 // This is the section (x5) that holds the quiz questions
-const quizQuestions1 = document.getElementById("questions");
-const quizQuestions2 = document.getElementById("questions");
-const quizQuestions3 = document.getElementById("questions");
-const quizQuestions4 = document.getElementById("questions");
-const quizQuestions5 = document.getElementById("questions");
+const quizQuestions = document.getElementById("questions");
 
 // get the heading (h2) element and create the five quiz questions as values
 let questionTitle5 = document.getElementById("question-title");
@@ -57,11 +53,11 @@ let questionTitle1 = document.getElementById("question-title");
 questionTitle1.textContent = "Commonly used data types do not include:";
 
 //  Append the titles to the questions section
-quizQuestions1.appendChild(questionTitle1);
-quizQuestions2.appendChild(questionTitle2);
-quizQuestions3.appendChild(questionTitle3);
-quizQuestions4.appendChild(questionTitle4);
-quizQuestions5.appendChild(questionTitle5);
+quizQuestions.appendChild(questionTitle1);
+quizQuestions.appendChild(questionTitle2);
+quizQuestions.appendChild(questionTitle3);
+quizQuestions.appendChild(questionTitle4);
+quizQuestions.appendChild(questionTitle5);
 
 // Create five ordered lists of choices
 const ol1 = document.createElement("ol");
