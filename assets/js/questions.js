@@ -1,3 +1,38 @@
+
+
+
+let questions = [
+    {
+        question: "Commonly used data types do not include:",
+        answerChoices: ["strings", "booleans", "alerts", "numbers" ],
+        correctChoice: "alerts"
+    },
+    
+    {
+        question: "The condition in an if/else statement is enclosed with __________.", 
+        answerChoices: ["quotes", "curly brackets", "parentheses", "square brackets"],
+        correctChoice: "parentheses"
+    },
+    
+    {
+        question: "Arrays in JavaScript can be used to store __________.", 
+        answerChoices: ["numbers and strings", "other arrays", "booleans", "all of the above"],
+        correctChoice: "all of the above"
+    },
+
+    {
+        question: "String values must be enclosed within __________ when being assigned to variables.",
+        answerChoices: ["commas", "curly brackets", "quotes", "parantheses"],
+        correctChoice: "quotes"
+    },
+
+    {
+        question: "A very useful tool used during development and debugging for printing content to the debugger is:",
+        answerChoices: ["JavaScript", "terminal/bash", "for loops", "console.log"],
+        correctChoice: "console.log"
+    },
+]
+
 // This is the section (x5) that holds the quiz questions
 const quizQuestions1 = document.getElementById("questions");
 const quizQuestions2 = document.getElementById("questions");
@@ -6,19 +41,19 @@ const quizQuestions4 = document.getElementById("questions");
 const quizQuestions5 = document.getElementById("questions");
 
 // get the heading (h2) element and create the five quiz questions as values
-const questionTitle5 = document.getElementById("question-title");
+let questionTitle5 = document.getElementById("question-title");
 questionTitle5.textContent = "A very useful tool used during development and debugging for printing content to the debugger is:";
 
-const questionTitle4 = document.getElementById("question-title");
+let questionTitle4 = document.getElementById("question-title");
 questionTitle4.textContent = "String values must be enclosed within __________ when being assigned to variables.";
 
-const questionTitle3 = document.getElementById("question-title");
+let questionTitle3 = document.getElementById("question-title");
 questionTitle3.textContent = "Arrays in JavaScript can be used to store __________.";
 
-const questionTitle2 = document.getElementById("question-title");
+let questionTitle2 = document.getElementById("question-title");
 questionTitle2.textContent = "The condition in an if/else statement is enclosed with __________.";
 
-const questionTitle1 = document.getElementById("question-title");
+let questionTitle1 = document.getElementById("question-title");
 questionTitle1.textContent = "Commonly used data types do not include:";
 
 //  Append the titles to the questions section
@@ -36,14 +71,13 @@ const ol4 = document.createElement("ol");
 const ol5 = document.createElement("ol");
 
 // Add this class to be used in css to style li elements as buttons
-ol1.setAttribute("class", "hidden buttons");
-ol2.setAttribute("class", "hidden buttons");
-ol3.setAttribute("class", "hidden buttons");
-ol4.setAttribute("class", "hidden buttons");
-ol5.setAttribute("class", "hidden buttons");
+ol1.setAttribute("class", "ol1 buttons");
+ol2.setAttribute("class", "ol2 buttons");
+ol3.setAttribute("class", "ol3 buttons");
+ol4.setAttribute("class", "ol4 buttons");
+ol5.setAttribute("class", "ol5 buttons");
 
 // Insert (after() not appendChild()) 
-questionTitle1.after(ol1);
 questionTitle1.after(ol1);
 questionTitle2.after(ol2);
 questionTitle3.after(ol3);
@@ -135,30 +169,30 @@ anchor5d.href = "#";
 
 // Create the text node for anchor element.
 
-const choice1a = document.createTextNode("strings");
-const choice1b = document.createTextNode("booleans");
-const choice1c = document.createTextNode("alerts"); // Correct! alerts are functions - the rest are primitive data types
-const choice1d = document.createTextNode("numbers");
+let choice1a = document.createTextNode("strings");
+let choice1b = document.createTextNode("booleans");
+let choice1c = document.createTextNode("alerts"); // Correct! alerts are functions - the rest are primitive data types
+let choice1d = document.createTextNode("numbers");
 
-const choice2a = document.createTextNode("quotes");
-const choice2b = document.createTextNode("curly brackets");
-const choice2c = document.createTextNode("parentheses"); // plural of parenthesis - Correct!
-const choice2d = document.createTextNode("square brackets");
+let choice2a = document.createTextNode("quotes");
+let choice2b = document.createTextNode("curly brackets");
+let choice2c = document.createTextNode("parentheses"); // plural of parenthesis - Correct!
+let choice2d = document.createTextNode("square brackets");
 
-const choice3a = document.createTextNode("numbers and strings");
-const choice3b = document.createTextNode("other arrays");
-const choice3c = document.createTextNode("booleans");
-const choice3d = document.createTextNode("all of the above");// Correct! But an array can only contain one of these as elements - objects can contain different values (properties)
+let choice3a = document.createTextNode("numbers and strings");
+let choice3b = document.createTextNode("other arrays");
+let choice3c = document.createTextNode("booleans");
+let choice3d = document.createTextNode("all of the above");// Correct! But an array can only contain one of these as elements - objects can contain different values (properties)
 
-const choice4a = document.createTextNode("commas");
-const choice4b = document.createTextNode("curly brackets");
-const choice4c = document.createTextNode("quotes");
-const choice4d = document.createTextNode("parentheses"); // plural of parenthesis - but still Wrong!
+let choice4a = document.createTextNode("commas");
+let choice4b = document.createTextNode("curly brackets");
+let choice4c = document.createTextNode("quotes");
+let choice4d = document.createTextNode("parentheses"); // plural of parenthesis - but still Wrong!
 
-const choice5a = document.createTextNode("JavaScript"); // Wrong!
-const choice5b = document.createTextNode("terminal/bash");
-const choice5c = document.createTextNode("for loops");
-const choice5d = document.createTextNode("console.log"); // Correct!
+let choice5a = document.createTextNode("JavaScript"); // Wrong!
+let choice5b = document.createTextNode("terminal/bash");
+let choice5c = document.createTextNode("for loops");
+let choice5d = document.createTextNode("console.log"); // Correct!
 
 // Append the text node to anchor element.
 anchor1a.appendChild(choice1a);

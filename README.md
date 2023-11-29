@@ -38,6 +38,26 @@ TO BE REVISTED: Will try to programmically create them using a css counter with 
 
 * Keeping in mind the reverse order issue, by hiding all 5 ordered lists in questions.js, then in the showFirstQuestionPage() function in the logic.js page, removing hidden whensetting the class of the first ordered list (using ol5).
 
+* Now considering the second event listener triggered upon selection of one of the four options to the first question. One has been "tagged" with a class name of "correct". It gets different treatment to the other three.
+
+* I'm stuck. I just can't hide the first question and show the second. 
+
+* Try the timer feature - add time - subtract time?
+
+* Try adding subtracting the score?
+
+* Still trying to build the second page - found an interesting method - insertBefore() The syntax that worked in this case:  parentNode.insertBefore(newNode, paraentnode.firstElementChild) I used the *firstElementChild* property which returns an element's first child (element).
+
+* Wednesday morning - still stuck, so I reviewed a couple of similar apps on GitHub - hat tip to Queen, Tuesday night's instructor. This confirmed my idea that all that needs to change is the text of the title and options elements. With this in mind, I began my session with tutor Suresh.
+
+* We went with my idea (change text only). The code for the questions title text and options text was refactored into a array of objects (question: text, answerChoices: text and correctChoice: text as elements)
+
+
+
+
+
+
+
 ### Code Logic - What are we trying to do
 
 1. A quiz with a timer
@@ -81,4 +101,10 @@ https://developer.mozilla.org/en-US/docs/Web/API/Element/after<br>
 
 CSS Lists, Markers, And Counters
 https://www.smashingmagazine.com/2019/07/css-lists-markers-counters/<br>
+
+JavaScript insertBefore
+https://www.javascripttutorial.net/javascript-dom/javascript-insertbefore/<br>
+
+Element: firstElementChild property
+https://developer.mozilla.org/en-US/docs/Web/API/Element/firstElementChild<br>
 
