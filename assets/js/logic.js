@@ -27,11 +27,11 @@ function showFirstQuestionPage() {
 
     quizQuestions.setAttribute("class", "questions1 show");// n.b. quizQuestions1 is a global variable
 
+    // Multiple ol lists are generated - these need to be hidden and eventually fixed
     ol4.setAttribute("class", "ol4 hide");
     ol3.setAttribute("class", "ol3 hide");
     ol2.setAttribute("class", "o12 hide");
     ol1.setAttribute("class", "ol1 hide");
-
 }
 
 function endQuiz() {
@@ -65,94 +65,10 @@ function showNextQuestionPage() {
         choice4b.textContent = choice5b.textContent;
         choice4c.textContent = choice5c.textContent;
         choice4d.textContent = choice5d.textContent;
-        
-
-
+      
     } else {
         endQuiz();
     }
-
-
-
-    /*
-      ol5.setAttribute("class", "ol5 hide");
-      quizQuestions1.setAttribute("class", "hide");
-      questionTitle1.setAttribute("class", "hide");
-     
-      questionTitle2.setAttribute("class", "show");
-      quizQuestions2.appendChild(questionTitle2);
-  
-      ol4.setAttribute("class", "ol4 buttons");
-  
-      questionTitle2.after(ol2);
-  
-      li2a.setAttribute("class", "show");
-      li2b.setAttribute("class", "show");
-      li2c.setAttribute("class", "correct");
-      li2d.setAttribute("class", "show");
-  
-  
-      anchor2a.setAttribute("class", "show");
-      anchor2b.setAttribute("class", "show");
-      anchor2c.setAttribute("class", "show");
-      anchor2d.setAttribute("class", "show");
-  
-      anchor2a.href = "#";
-      anchor2b.href = "#";
-      anchor2c.href = "#";
-      anchor2d.href = "#";
-  
-      const choice2a = document.createTextNode("quotes");
-      const choice2b = document.createTextNode("curly brackets");
-      const choice2c = document.createTextNode("parentheses"); // plural of parenthesis - Correct!
-      const choice2d = document.createTextNode("square brackets");
-  
-  
-      anchor2a.appendChild(choice2a);
-      anchor2b.appendChild(choice2b);
-      anchor2c.appendChild(choice2c);
-      anchor2d.appendChild(choice2d);
-  
-      anchor2a.title = "link";
-      anchor2b.title = "link";
-      anchor2c.title = "link";
-      anchor2d.title = "link";
-  
-      li2a.appendChild(anchor1a);
-      li2b.appendChild(anchor1b);
-      li2c.appendChild(anchor1c);
-      li2d.appendChild(anchor1d);
-  
-      ol2.appendChild(li2a);
-      ol2.appendChild(li2b);
-      ol2.appendChild(li2c);
-      ol2.appendChild(li2d);
-  */
-
-    //  console.log(questionTitle2);
-    //   console.log(quizQuestions2);
-    //   console.log(ol4);
-    //  console.log(wrapper)
-
-
-
-
-
-    // let h1 = document.querySelector("h1");
-    //h1.appendChild(quizQuestions2);
-
-
-
-    /*
-        if (document.querySelector(".correct")) {
-            alert("Correct!");
-            // add 10 seconds to timer
-        } else {
-            alert("Nope!");
-            // subtract 10 seconds from timer
-        }
-
-     */
 
 
 

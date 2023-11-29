@@ -52,7 +52,7 @@ TO BE REVISTED: Will try to programmically create them using a css counter with 
 
 * We went with my idea (change text only). The code for the questions title text and options text was refactored into a array of objects (question: text, answerChoices: text and correctChoice: text as elements)
 
-
+* Added the additional code in logic.js, to change the set of options with the change of questions. Some minimal refactoring to tidy up extraneous code and commented code. More than this unravelled the working app. Time to proceed to the next feature - the timer.
 
 
 
