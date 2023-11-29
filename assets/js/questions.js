@@ -84,7 +84,6 @@ questionTitle5.after(ol5);
 const li1a = document.createElement("li");
 const li1b = document.createElement("li");
 const li1c = document.createElement("li");
-li1c.setAttribute("class", "correct");
 const li1d = document.createElement("li");
 
 const li2a = document.createElement("li");
@@ -97,19 +96,19 @@ const li3a = document.createElement("li");
 const li3b = document.createElement("li");
 const li3c = document.createElement("li");
 const li3d = document.createElement("li");
-li3d.setAttribute("class", "correct");
+
 
 const li4a = document.createElement("li");
 const li4b = document.createElement("li");
 const li4c = document.createElement("li");
-li4c.setAttribute("class", "correct");
+
 const li4d = document.createElement("li");
 
 const li5a = document.createElement("li");
 const li5b = document.createElement("li");
 const li5c = document.createElement("li");
 const li5d = document.createElement("li");
-li5d.setAttribute("class", "correct");
+
 
 // Create anchor element
 const anchor1a = document.createElement("a");

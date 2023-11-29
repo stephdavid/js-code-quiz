@@ -69,9 +69,6 @@ function showNextQuestionPage() {
     } else {
         endQuiz();
     }
-
-
-
 }
 
 
@@ -83,3 +80,47 @@ document.getElementById("start").addEventListener("click", function () {
 document.querySelector(".buttons").addEventListener("click", function () {
     showNextQuestionPage();
 });
+
+// Countdown timer
+
+
+var main = document.getElementById("main");
+
+var secondsLeft = 30;
+
+function setTime() {
+    // Sets interval in variable
+    var timerInterval = setInterval(function () {
+        secondsLeft--;
+        time.textContent = secondsLeft + " seconds left till quiz is over.";
+
+        if (secondsLeft === 0) {
+            // Stops execution of action at set interval
+            clearInterval(timerInterval);
+            // Calls function to create and append image
+            sendMessage();
+        }
+
+    }, 1000);
+}
+
+// Function to display the numbers counting down
+function displayCountdown() {
+    time.textContent = " ";
+}
+
+setTime();
+
+// add time out message 
+
+// add condition to stop counter if all questions are answered before time out
+
+// add a message saying the count has stopped
+
+// add a message giving results
+
+// add feature if correct add five seconds
+
+// add feature if incorrect subtract five seconds
+
+
