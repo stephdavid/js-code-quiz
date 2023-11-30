@@ -56,7 +56,7 @@ TO BE REVISTED: Will try to programmically create them using a css counter with 
 
 * Started on the timer, and the score counter. Added label to input element.
 
-* I've added code to determine if whether the answer selected by the user is the correct answer. If they, event target...
+* I've added code to determine if whether the answer selected by the user is the correct answer. As it could be one of five object properties, either one of these represented by i is true. With an event listener, get the user's selected option. If it matches the obect property correctChoice (is true) increment the score counter by 1, alert the user that the answer is correct. If it does not match (is false) alert the user that it is an incorrect answer and tell them what the correct answer is
 
 
 
@@ -109,4 +109,9 @@ https://www.javascripttutorial.net/javascript-dom/javascript-insertbefore/<br>
 
 Element: firstElementChild property
 https://developer.mozilla.org/en-US/docs/Web/API/Element/firstElementChild<br>
+
+JavaScript HTML DOM EventListener
+https://www.w3schools.com/js/js_htmldom_eventlistener.asp<br>
+
+
 

@@ -1,6 +1,7 @@
 let questionIndex = 0;
 let timerInterval;
-var time = document.getElementById("time");
+let time = document.getElementById("time");
+let scoreCounter = 0;
 
 function showQuestionScreen() {
     // hide the paragraph.show and button #show
@@ -69,18 +70,18 @@ function showNextQuestion() {
     }
 }
 
-
 document.getElementById("start").addEventListener("click", function () {
     showQuestionScreen();
 });
 
+// The correct answer correctChoice can be one of 5 objects, starting with the first or 0 in the questions array.
 let i = 0;
-let scoreCounter = 0;
 
+// Add an event listener to capture the the user selection
 document.querySelector(".buttons").addEventListener("click", function (event) {
-    // Get the user-selected answer
+    // the event is stored in a variable
     let selectedAnswer = event.target.textContent;
-
+    // Determine if the user selection matches the object property correctChoice and then carry out the respective actions
     if (selectedAnswer === questions[i].correctChoice) {
         scoreCounter++;
         alert("Correct Answer!");
@@ -88,31 +89,14 @@ document.querySelector(".buttons").addEventListener("click", function (event) {
         scoreCounter--;
         alert("Incorrect Answer! The correct answer is " + questions[i].correctChoice + ".");
     }
-
+    // Once the loop has completed then display the next questions
     showNextQuestion();
+    // The index is incremented to correspond to the next question
     i++;
 });
 
 
 
-document.querySelector(".buttons").addEventListener("click", function () {
-    let i = 0;
-    //questions[i].correctChoice;
-
-    let scoreCounter = 0;
-
-    if (questions[i].hasOwnProperty(correctChoice) && questions[i].correctChoice === true) {
-        scoreCounter++
-        alert("Correct Answer!")
-        showNextQuestion();
-    } else {
-        scoreCounter--
-        alert("Incorrect Answer! The correct answer is " + questions[0].correctChoice + ".")
-        showNextQuestion();
-    }
-    i++;
-
-});
 // Countdown timer
 
 const main = document.getElementById("main");
