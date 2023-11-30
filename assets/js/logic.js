@@ -1,47 +1,39 @@
 let questionIndex = 0;
+let timerInterval;
 
-function showFirstQuestionPage() {
+
+function showQuestionScreen() {
     // hide the paragraph.show and button #show
     // show the paragraph section and the question ordered list
     // only the first question and options to be shown - hide all others
 
-    // TO DO: keep the function generic for specific questions send arguments
-    /*
-      // Using the remove() method as these elements are no longer required could get in the way of future actions
-      // select the intro paragraph
-  
-      const removeIntroParagraph = document.querySelector(".show");
-      // remove the intro paragraph
-      removeIntroParagraph.remove();
-      // select the start button
-      const removeStartButton = document.getElementById("start");
-  
-      // remove the start button
-      removeStartButton.remove();
-   */
-
-
-
     const startScreen = document.getElementById("start-screen");
     startScreen.setAttribute("class", "hide");
 
-    quizQuestions.setAttribute("class", "questions1 show");// n.b. quizQuestions1 is a global variable
+    quizQuestionsScreen.setAttribute("class", "show");
 
-    // Multiple ol lists are generated - these need to be hidden and eventually fixed
+    // Multiple ordered lists are generated - these need to be hidden and eventually fixed
     ol4.setAttribute("class", "ol4 hide");
     ol3.setAttribute("class", "ol3 hide");
     ol2.setAttribute("class", "o12 hide");
     ol1.setAttribute("class", "ol1 hide");
 }
 
-function endQuiz() {
-    // stop timer
+function endOfQuiz() {
+
     // hide questions page
     // show end screen - is this your final score
     alert("End of Quiz!");
+    // stop timer
+    clearInterval(timerInterval);
+
+    const quizQuestionsScreen = document.getElementById("questions");
+    quizQuestionsScreen.setAttribute("class", "hide");
+    const endScreen = document.getElementById("end-screen");
+    endScreen.setAttribute("class", "show");
 }
 
-function showNextQuestionPage() {
+function showNextQuestion() {
     questionIndex++;
     if (questionIndex < questions.length) {
         questionTitle1.textContent = questions[questionIndex].question;
@@ -55,7 +47,7 @@ function showNextQuestionPage() {
         choice2b.textContent = choice3b.textContent;
         choice2c.textContent = choice3c.textContent;
         choice2d.textContent = choice3d.textContent;
-        
+
         choice3a.textContent = choice4a.textContent;
         choice3b.textContent = choice4b.textContent;
         choice3c.textContent = choice4c.textContent;
@@ -65,32 +57,40 @@ function showNextQuestionPage() {
         choice4b.textContent = choice5b.textContent;
         choice4c.textContent = choice5c.textContent;
         choice4d.textContent = choice5d.textContent;
-      
+
     } else {
-        endQuiz();
+        endOfQuiz();
     }
 }
 
 
 document.getElementById("start").addEventListener("click", function () {
-    //alert("Hello World!");
-    showFirstQuestionPage();
+    showQuestionScreen();
 });
 
 document.querySelector(".buttons").addEventListener("click", function () {
-    showNextQuestionPage();
+    // if correct counter ++, if incorrect counter --
+    let scoreCounter = 0;
+    if (questions[0].correctChoice) {
+        scoreCounter++
+    } else {
+        scoreCounter--
+    }   
+   
+
+  
+    showNextQuestion();
 });
 
 // Countdown timer
 
+const main = document.getElementById("main");
 
-var main = document.getElementById("main");
-
-var secondsLeft = 30;
+let secondsLeft = 30;
 
 function setTime() {
     // Sets interval in variable
-    var timerInterval = setInterval(function () {
+    timerInterval = setInterval(function () {
         secondsLeft--;
         time.textContent = secondsLeft + " seconds left till quiz is over.";
 
@@ -102,6 +102,7 @@ function setTime() {
         }
 
     }, 1000);
+    return timerInterval;
 }
 
 // Function to display the numbers counting down
@@ -109,7 +110,8 @@ function displayCountdown() {
     time.textContent = " ";
 }
 
-setTime();
+let intervalId = setTime();
+
 
 // add time out message 
 

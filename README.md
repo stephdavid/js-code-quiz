@@ -54,7 +54,7 @@ TO BE REVISTED: Will try to programmically create them using a css counter with 
 
 * Added the additional code in logic.js, to change the set of options with the change of questions. Some minimal refactoring to tidy up extraneous code and commented code. More than this unravelled the working app. Time to proceed to the next feature - the timer.
 
-
+* Started on the timer, and the score counter. Added label to input element.
 
 
 

@@ -34,7 +34,7 @@ let questions = [
 ]
 
 // This is the section (x5) that holds the quiz questions
-const quizQuestions = document.getElementById("questions");
+const quizQuestionsScreen = document.getElementById("questions");
 
 // get the heading (h2) element and create the five quiz questions as values
 let questionTitle5 = document.getElementById("question-title");
@@ -53,11 +53,11 @@ let questionTitle1 = document.getElementById("question-title");
 questionTitle1.textContent = "Commonly used data types do not include:";
 
 //  Append the titles to the questions section
-quizQuestions.appendChild(questionTitle1);
-quizQuestions.appendChild(questionTitle2);
-quizQuestions.appendChild(questionTitle3);
-quizQuestions.appendChild(questionTitle4);
-quizQuestions.appendChild(questionTitle5);
+quizQuestionsScreen.appendChild(questionTitle1);
+quizQuestionsScreen.appendChild(questionTitle2);
+quizQuestionsScreen.appendChild(questionTitle3);
+quizQuestionsScreen.appendChild(questionTitle4);
+quizQuestionsScreen.appendChild(questionTitle5);
 
 // Create five ordered lists of choices
 const ol1 = document.createElement("ol");
