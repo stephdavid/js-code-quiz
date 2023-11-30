@@ -36,8 +36,15 @@ function endOfQuiz() {
     quizQuestionsScreen.setAttribute("class", "hide");
     const endScreen = document.getElementById("end-screen");
     endScreen.setAttribute("class", "show");
+    const maxScore = 5;
+    const gameScore = document.getElementById("game-score");
+    
+    gameScore.textContent = scoreCounter + " / " + maxScore;
 
-
+    // Select the input element to get the value of the userinitials
+    document.getElementById("submit").addEventListener("click", function () {
+        console.log(document.getElementById("initials").value)
+    });
 }
 
 function showNextQuestion() {
@@ -86,7 +93,7 @@ document.querySelector(".buttons").addEventListener("click", function (event) {
         scoreCounter++;
         alert("Correct Answer!");
     } else {
-        scoreCounter--;
+       // scoreCounter--; // not for score but for the timer
         alert("Incorrect Answer! The correct answer is " + questions[i].correctChoice + ".");
     }
     // Once the loop has completed then display the next questions

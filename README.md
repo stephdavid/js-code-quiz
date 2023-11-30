@@ -58,7 +58,9 @@ TO BE REVISTED: Will try to programmically create them using a css counter with 
 
 * I've added code to determine if whether the answer selected by the user is the correct answer. As it could be one of five object properties, either one of these represented by i is true. With an event listener, get the user's selected option. If it matches the obect property correctChoice (is true) increment the score counter by 1, alert the user that the answer is correct. If it does not match (is false) alert the user that it is an incorrect answer and tell them what the correct answer is
 
+* Have commenced writing the code to get the user's initials
 
+* Start to display the game total
 
 ### Code Logic - What are we trying to do
 
@@ -113,5 +115,6 @@ https://developer.mozilla.org/en-US/docs/Web/API/Element/firstElementChild<br>
 JavaScript HTML DOM EventListener
 https://www.w3schools.com/js/js_htmldom_eventlistener.asp<br>
 
-
+Event Object = Introduction to Browser Events
+https://javascript.info/introduction-browser-events#event-object
 
