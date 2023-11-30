@@ -89,7 +89,6 @@ const li1d = document.createElement("li");
 const li2a = document.createElement("li");
 const li2b = document.createElement("li");
 const li2c = document.createElement("li");
-li2c.setAttribute("class", "correct");
 const li2d = document.createElement("li");
 
 const li3a = document.createElement("li");
@@ -101,7 +100,6 @@ const li3d = document.createElement("li");
 const li4a = document.createElement("li");
 const li4b = document.createElement("li");
 const li4c = document.createElement("li");
-
 const li4d = document.createElement("li");
 
 const li5a = document.createElement("li");
@@ -189,7 +187,7 @@ let choice5b = document.createTextNode("terminal/bash");
 let choice5c = document.createTextNode("for loops");
 let choice5d = document.createTextNode("console.log"); // Correct!
 
-// Append the text node to anchor element.
+// Append the text node to anchor element
 anchor1a.appendChild(choice1a);
 anchor1b.appendChild(choice1b);
 anchor1c.appendChild(choice1c);

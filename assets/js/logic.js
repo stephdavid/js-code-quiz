@@ -1,7 +1,44 @@
 let questionIndex = 0;
 let timerInterval;
 let time = document.getElementById("time");
-let scoreCounter = 0;
+let scoreCount = 0;
+let gameCount = 0;
+let highScore = 0;
+
+// Countdown timer
+
+const main = document.getElementById("main");
+
+let secondsLeft = 30;
+
+function setTime() {
+    // Sets interval in variable
+    timerInterval = setInterval(function () {
+        secondsLeft--;
+        time.textContent = secondsLeft + " seconds left till quiz is over.";
+
+        if (secondsLeft === 0) {
+            // Stops execution of action at set interval
+            clearInterval(timerInterval);
+            // Calls function to create and append image
+            //  sendMessage();
+        }
+
+    }, 1000);
+    return timerInterval;
+}
+
+// Function to display the numbers counting down
+function displayCountdown() {
+    time.textContent = " ";
+}
+
+
+
+
+// add time out message 
+
+
 
 function showQuestionScreen() {
     // hide the paragraph.show and button #show
@@ -13,6 +50,8 @@ function showQuestionScreen() {
 
     quizQuestionsScreen.setAttribute("class", "show");
 
+    let intervalId = setTime();
+
     // Multiple ordered lists are generated - these need to be hidden and eventually fixed
     ol4.setAttribute("class", "ol4 hide");
     ol3.setAttribute("class", "ol3 hide");
@@ -22,8 +61,8 @@ function showQuestionScreen() {
 
 function endOfQuiz() {
 
-    // hide questions page
-    // show end screen - is this your final score
+    // hide questions section
+    // show end screen - is this your final score - if yes display highest 5 scores if no play another game
     alert("End of Quiz!");
     // stop timer
     clearInterval(timerInterval);
@@ -36,15 +75,29 @@ function endOfQuiz() {
     quizQuestionsScreen.setAttribute("class", "hide");
     const endScreen = document.getElementById("end-screen");
     endScreen.setAttribute("class", "show");
+
     const maxScore = 5;
     const gameScore = document.getElementById("game-score");
+    gameScore.textContent = scoreCount + " / " + maxScore;
     
-    gameScore.textContent = scoreCounter + " / " + maxScore;
-
-    // Select the input element to get the value of the userinitials
+    // Select the input element to get the value of the user initials
     document.getElementById("submit").addEventListener("click", function () {
-        console.log(document.getElementById("initials").value)
+        //console.log(document.getElementById("initials").value)
+        let userInitials = document.getElementById("initials").value;
+        let userScore = userInitials + " - " + gameScore;
+        userScore.setAttribute("class", "show");
     });
+
+    gameCount++;
+
+    if (gameScore > highScore) {
+        userScore1 = userScore;
+    }   
+
+
+
+
+
 }
 
 function showNextQuestion() {
@@ -90,13 +143,20 @@ document.querySelector(".buttons").addEventListener("click", function (event) {
     let selectedAnswer = event.target.textContent;
     // Determine if the user selection matches the object property correctChoice and then carry out the respective actions
     if (selectedAnswer === questions[i].correctChoice) {
-        scoreCounter++;
+        scoreCount++;
         alert("Correct Answer!");
     } else {
        // scoreCounter--; // not for score but for the timer
         alert("Incorrect Answer! The correct answer is " + questions[i].correctChoice + ".");
     }
+
+
+
+
+
+    
     // Once the loop has completed then display the next questions
+    
     showNextQuestion();
     // The index is incremented to correspond to the next question
     i++;
@@ -104,38 +164,7 @@ document.querySelector(".buttons").addEventListener("click", function (event) {
 
 
 
-// Countdown timer
 
-const main = document.getElementById("main");
-
-let secondsLeft = 30;
-
-function setTime() {
-    // Sets interval in variable
-    timerInterval = setInterval(function () {
-        secondsLeft--;
-        time.textContent = secondsLeft + " seconds left till quiz is over.";
-
-        if (secondsLeft === 0) {
-            // Stops execution of action at set interval
-            clearInterval(timerInterval);
-            // Calls function to create and append image
-            //  sendMessage();
-        }
-
-    }, 1000);
-    return timerInterval;
-}
-
-// Function to display the numbers counting down
-function displayCountdown() {
-    time.textContent = " ";
-}
-
-let intervalId = setTime();
-
-
-// add time out message 
 
 // add condition to stop counter if all questions are answered before time out
 
