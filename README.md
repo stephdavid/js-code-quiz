@@ -56,6 +56,8 @@ TO BE REVISTED: Will try to programmically create them using a css counter with 
 
 * Started on the timer, and the score counter. Added label to input element.
 
+* I've added code to determine if whether the answer selected by the user is the correct answer. If they, event target...
+
 
 
 ### Code Logic - What are we trying to do

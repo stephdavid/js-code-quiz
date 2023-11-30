@@ -1,6 +1,6 @@
 let questionIndex = 0;
 let timerInterval;
-
+var time = document.getElementById("time");
 
 function showQuestionScreen() {
     // hide the paragraph.show and button #show
@@ -26,11 +26,17 @@ function endOfQuiz() {
     alert("End of Quiz!");
     // stop timer
     clearInterval(timerInterval);
+    // hide Timer:
+    const showTime = document.querySelector(".timer");
+    showTime.textContent = "";
+    time.textContent = " ";
 
     const quizQuestionsScreen = document.getElementById("questions");
     quizQuestionsScreen.setAttribute("class", "hide");
     const endScreen = document.getElementById("end-screen");
     endScreen.setAttribute("class", "show");
+
+
 }
 
 function showNextQuestion() {
@@ -68,20 +74,45 @@ document.getElementById("start").addEventListener("click", function () {
     showQuestionScreen();
 });
 
-document.querySelector(".buttons").addEventListener("click", function () {
-    // if correct counter ++, if incorrect counter --
-    let scoreCounter = 0;
-    if (questions[0].correctChoice) {
-        scoreCounter++
-    } else {
-        scoreCounter--
-    }   
-   
+let i = 0;
+let scoreCounter = 0;
 
-  
+document.querySelector(".buttons").addEventListener("click", function (event) {
+    // Get the user-selected answer
+    let selectedAnswer = event.target.textContent;
+
+    if (selectedAnswer === questions[i].correctChoice) {
+        scoreCounter++;
+        alert("Correct Answer!");
+    } else {
+        scoreCounter--;
+        alert("Incorrect Answer! The correct answer is " + questions[i].correctChoice + ".");
+    }
+
     showNextQuestion();
+    i++;
 });
 
+
+
+document.querySelector(".buttons").addEventListener("click", function () {
+    let i = 0;
+    //questions[i].correctChoice;
+
+    let scoreCounter = 0;
+
+    if (questions[i].hasOwnProperty(correctChoice) && questions[i].correctChoice === true) {
+        scoreCounter++
+        alert("Correct Answer!")
+        showNextQuestion();
+    } else {
+        scoreCounter--
+        alert("Incorrect Answer! The correct answer is " + questions[0].correctChoice + ".")
+        showNextQuestion();
+    }
+    i++;
+
+});
 // Countdown timer
 
 const main = document.getElementById("main");
@@ -98,7 +129,7 @@ function setTime() {
             // Stops execution of action at set interval
             clearInterval(timerInterval);
             // Calls function to create and append image
-            sendMessage();
+            //  sendMessage();
         }
 
     }, 1000);
