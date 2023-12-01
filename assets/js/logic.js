@@ -78,10 +78,17 @@ function endOfQuiz() {
 
     // Select the input element to get the value of the user initials
     document.getElementById("submit").addEventListener("click", function () {
-        //console.log(document.getElementById("initials").value)
+
+
+
         let userInitials = document.getElementById("initials").value;
-        let userScore = userInitials + " - " + gameScore;
-        userScore.setAttribute("class", "show");
+        userScoreTxt = userInitials + " - " + gameScore;
+
+        let userScoreSpan = document.getElementById("game-score");
+        userScoreSpan.textContent = scoreCount;
+        userScoreSpan.setAttribute("class", "");
+
+       
     });
 
     gameCount++;
