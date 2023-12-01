@@ -4,6 +4,7 @@ let time = document.getElementById("time");
 let scoreCount = 0;
 let gameCount = 0;
 let highScore = 0;
+let userScore = 0;
 
 // Countdown timer
 
@@ -33,8 +34,7 @@ function displayCountdown() {
     time.textContent = " ";
 }
 
-// TO DO = add time out message and subsequent action 
-
+// add time out message 
 
 function showQuestionScreen() {
     // hide the paragraph.show and button #show
@@ -46,7 +46,7 @@ function showQuestionScreen() {
 
     quizQuestionsScreen.setAttribute("class", "show");
 
-    let intervalId = setTime();
+    setTime();
 
     // Multiple ordered lists are generated - these need to be hidden and eventually fixed
     ol4.setAttribute("class", "ol4 hide");
@@ -72,6 +72,8 @@ function endOfQuiz() {
     const endScreen = document.getElementById("end-screen");
     endScreen.setAttribute("class", "show");
 
+    renderLastRegistered();
+
     const maxScore = 5;
     const gameScore = document.getElementById("game-score");
     gameScore.textContent = scoreCount + " / " + maxScore;
@@ -80,17 +82,14 @@ function endOfQuiz() {
     document.getElementById("submit").addEventListener("click", function () {
         //console.log(document.getElementById("initials").value)
         let userInitials = document.getElementById("initials").value;
-        let userScore = userInitials + " - " + gameScore;
-        userScore.setAttribute("class", "show");
+        userScore = userInitials + " - " + gameScore;
     });
 
+    localStorage.setItem("scoreCount", scoreCount);
+    renderLastRegistered();
+
     gameCount++;
-
-    if (gameScore > highScore) {
-        userScore1 = userScore;
-    }
-
-
+    return gameCount;
 }
 
 function showNextQuestion() {
@@ -143,13 +142,15 @@ document.querySelector(".buttons").addEventListener("click", function (event) {
         alert("Incorrect Answer! The correct answer is " + questions[i].correctChoice + ".");
     }
 
-
     // Once the loop has completed then display the next questions
 
     showNextQuestion();
     // The index is incremented to correspond to the next question
     i++;
 });
+
+
+
 
 
 // add condition to stop counter if all questions are answered before time out
@@ -161,4 +162,5 @@ document.querySelector(".buttons").addEventListener("click", function (event) {
 // add feature if correct add five seconds
 
 // add feature if incorrect subtract five seconds
+
 
