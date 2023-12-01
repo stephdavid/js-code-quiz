@@ -79,25 +79,17 @@ function endOfQuiz() {
     // Select the input element to get the value of the user initials
     document.getElementById("submit").addEventListener("click", function () {
 
-
-
         let userInitials = document.getElementById("initials").value;
         userScoreTxt = userInitials + " - " + gameScore;
 
         let userScoreSpan = document.getElementById("game-score");
-        userScoreSpan.textContent = scoreCount;
+        userScoreSpan.textContent = userInitials + " - " + scoreCount + " questions out of " + maxScore;
         userScoreSpan.setAttribute("class", "");
-
        
     });
 
     gameCount++;
-
-    if (gameScore > highScore) {
-        userScore1 = userScore;
-    }
-
-
+    
 }
 
 function showNextQuestion() {

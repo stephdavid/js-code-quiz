@@ -38,19 +38,19 @@ const quizQuestionsScreen = document.getElementById("questions");
 
 // get the heading (h2) element and create the five quiz questions as values
 let questionTitle5 = document.getElementById("question-title");
-questionTitle5.textContent = "A very useful tool used during development and debugging for printing content to the debugger is:";
+questionTitle5.textContent = questions[0].correctChoice;
 
 let questionTitle4 = document.getElementById("question-title");
-questionTitle4.textContent = "String values must be enclosed within __________ when being assigned to variables.";
+questionTitle4.textContent = questions[1].correctChoice;
 
 let questionTitle3 = document.getElementById("question-title");
-questionTitle3.textContent = "Arrays in JavaScript can be used to store __________.";
+questionTitle3.textContent = questions[2].correctChoice;
 
 let questionTitle2 = document.getElementById("question-title");
-questionTitle2.textContent = "The condition in an if/else statement is enclosed with __________.";
+questionTitle2.textContent = questions[3].correctChoice;
 
 let questionTitle1 = document.getElementById("question-title");
-questionTitle1.textContent = "Commonly used data types do not include:";
+questionTitle1.textContent = questions[4].correctChoice;
 
 //  Append the titles to the questions section
 quizQuestionsScreen.appendChild(questionTitle1);

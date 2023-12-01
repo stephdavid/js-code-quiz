@@ -1,5 +1,6 @@
 const scores = [];
 const ol = document.getElementById("highscores");
+let highestScore = 0;
 
 const highScore1Li = document.createElement("li");
 const highScore2Li = document.createElement("li");
@@ -7,39 +8,24 @@ const highScore3Li = document.createElement("li");
 const highScore4Li = document.createElement("li");
 const highScore5Li = document.createElement("li");
 
-highscores.appendChild(highScore1Li);
-highscores.appendChild(highScore2Li);
-highscores.appendChild(highScore3Li);
-highscores.appendChild(highScore4Li);
-highscores.appendChild(highScore5Li);
 
-//Function to get the highest score from the scores array
-let highestScore = function getHighestScore() {
-    if (scores.length > 0) {
-        return scores[0];
+function displayFiveHighestScores() {
+
+    if (gameCount < 5) {
+        for (let i = 1; i <= 5; i++) {
+            //push  xxx to the array
+            scores.push(scoreCount);
+            document.getElementsByClassName("highscore")[i].textContent = scores[i];
+        }
     } else {
-        return 0; // Default value if no scores yet
-    }
-}
-
-function displayFiveHighestScores(gameScore) {
-     // Check if the current gameScore is greater than the lowest high score
-    if (gameScore > scores[4] || scores.length < 5) {
-        // Find the correct position to insert the new score
-        let insertIndex = 0;
-        while (insertIndex < scores.length && gameScore < scores[insertIndex]) {
-            insertIndex++;
-        }
-        // Insert the new score at the correct position
-        scores.splice(insertIndex, 0, gameScore);
-
-        // Trim the array to keep only the top 5 scores
-        scores.length = Math.min(scores.length, 5);
-        // Display the updated scores
-        for (let i = 0; i < 5; i++) {
-            const highScore = document.getElementsByClassName("highscore")[i];
-            highScore.textContent = scores[i]; 
+        //push scoreCount to the array
+        scores.push(scoreCount);
+        //sort the array in descending order largest value to smallest value
+        scores.sort(function (a, b) { return b - a });
+        //remove the smallest value
+        scores.pop()
+        for (let i = 0; i <= scores.length; i++) {
+            document.getElementsByClassName("highscore")[i].textContent = scores[i];
         }
     }
 }
-

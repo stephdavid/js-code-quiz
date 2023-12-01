@@ -62,6 +62,14 @@ TO BE REVISTED: Will try to programmically create them using a css counter with 
 
 * Start to display the game total
 
+* Clarification in Friday night class - in the end-screen section the "enter initials and then submit" takes user to the next page.
+
+* Yes, local storage is expected...
+  
+* As well, a bit of housekeeping - in questions.js replaced what became the duplicate text to its object location - this is one example of refactoring as I go long. At some point the redundant anchor tags will be removed. It's kinda sad to see code I working so lovingly on, just thrown away. 
+
+
+
 ### Code Logic - What are we trying to do
 
 1. A quiz with a timer
@@ -116,5 +124,11 @@ JavaScript HTML DOM EventListener
 https://www.w3schools.com/js/js_htmldom_eventlistener.asp<br>
 
 Event Object = Introduction to Browser Events
-https://javascript.info/introduction-browser-events#event-object
+https://javascript.info/introduction-browser-events#event-object<br>
+
+JavaScript Array sort()
+https://www.w3schools.com/jsref/jsref_sort.asp<br>
+
+JavaScript Array pop()
+https://www.w3schools.com/jsref/jsref_pop.asp
 
