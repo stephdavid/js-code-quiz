@@ -1,14 +1,15 @@
 let questionIndex = 0;
 let timerInterval;
 let time = document.getElementById("time");
-let scoreCount = 0;
-let gameCount = 0;
+let score = 0;
+let gameCount = localStorage.getItem("gameCount") || 0;
 let highScore = 0;
 let latestScore = "";
 
+const scoresString = localStorage.getItem("scores");
+const scores = scoresString ? JSON.parse(scoresString) : [];
 
-// Countdown timer
-
+//Countdown timer
 const main = document.getElementById("main");
 
 let secondsLeft = 30;
@@ -76,10 +77,7 @@ function endOfQuiz() {
 
     const maxScore = 5;
     const gameScore = document.getElementById("game-score");
-    gameScore.textContent = scoreCount + " / " + maxScore;
-
-    // store scoreCount in local storage to picked up in scores.js
-   latestScore = localStorage.setItem("gameScore", scoreCount.toString());
+    gameScore.textContent = score + " / " + maxScore;
 
     // Select the input element to get the value of the user initials
     document.getElementById("submit").addEventListener("click", function () {
@@ -87,16 +85,25 @@ function endOfQuiz() {
         let userInitials = document.getElementById("initials").value;
         userScoreTxt = userInitials + " - " + gameScore;
 
-        let userScoreSpan = document.getElementById("game-score");
-        userScoreSpan.textContent = userInitials + " - " + scoreCount + " questions out of " + maxScore;
-        userScoreSpan.setAttribute("class", "");
-       
+      //  let userScoreSpan = document.getElementById("game-score");
+     //   userScoreSpan.textContent = userInitials + " - " + score + " questions out of " + maxScore;
+     //  userScoreSpan.setAttribute("class", "");
+        scores.push(score);
+       console.log("Scores: ", scores);
+
+        // place the updated scores array into local storage
+        const stringifiedScores = JSON.stringify(scores);
+        localStorage.setItem("scores", stringifiedScores);
+
+        console.log("Scores: ", scores);
+
     });
 
     gameCount++;
-    // store scoreCount in local storage to picked up in scores.js
-    latestGameCount = localStorage.setItem("gameCount", gameCount);
 
+    // store updated gameCount in local storage to picked up in scores.js
+    latestGameCount = localStorage.setItem("gameCount", gameCount.toString());
+    //console.log(latestGameCount);
 }
 
 function showNextQuestion() {
@@ -142,16 +149,14 @@ document.querySelector(".buttons").addEventListener("click", function (event) {
     let selectedAnswer = event.target.textContent;
     // Determine if the user selection matches the object property correctChoice and then carry out the respective actions
     if (selectedAnswer === questions[i].correctChoice) {
-        scoreCount++;
+        score++;
         alert("Correct Answer!");
     } else {
-        // scoreCounter--; // not for score but for the timer
+
         alert("Incorrect Answer! The correct answer is " + questions[i].correctChoice + ".");
     }
 
-
-    // Once the loop has completed then display the next questions
-
+    // Once the loop has completed then display the next question
     showNextQuestion();
     // The index is incremented to correspond to the next question
     i++;

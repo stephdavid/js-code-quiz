@@ -72,6 +72,10 @@ TO BE REVISTED: Will try to programmically create them using a css counter with 
 
 * renderLastElement() or getItem("gameScore")?
 
+* Saturday evening - I'm still not able to display the highest 5 scores - there's an issue with the scores array. I have created 3 items of local storage in logic.js to be retrieved in scores.js - not sure what the issue is here
+
+* Late Saturday evening. The array was displaying as an array of strings (which inlcuded commas and square brackets) not numbers. A thorny problem - I resorted to a lengthy chat with ChatGPT over a few hours. But this bit is sorted. More coding to do. This has become a two-pizza project.
+
 
 
 ### Code Logic - What are we trying to do
@@ -151,8 +155,17 @@ https://medium.com/@techsuneel99/speed-up-javascript-array-processing-1f878158f4
 4 Ways to Remove the Last Element from an Array in JavaScript
 https://medium.com/@iamdarius/4-ways-to-remove-the-last-element-from-an-array-in-javascript-17749b12be0c<br>
 
+Window localStorage
+https://www.w3schools.com/jsref/prop_win_localstorage.asp<br>
+
 LocalStorage-Sign-up-form - renderLastRegistered() function
 https://github.com/EvgeniiI7/LocalStorage-Sign-up-form<br>
+
+How to store objects or arrays in browser local storage
+https://www.freecodecamp.org/news/how-to-store-objects-or-arrays-in-browser-local-storage/<br>
+
+ChatGBT-3.5
+https://chat.openai.com/<br>
 
 
 
