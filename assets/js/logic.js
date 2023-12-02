@@ -4,6 +4,8 @@ let time = document.getElementById("time");
 let scoreCount = 0;
 let gameCount = 0;
 let highScore = 0;
+let latestScore = "";
+
 
 // Countdown timer
 
@@ -76,6 +78,9 @@ function endOfQuiz() {
     const gameScore = document.getElementById("game-score");
     gameScore.textContent = scoreCount + " / " + maxScore;
 
+    // store scoreCount in local storage to picked up in scores.js
+   latestScore = localStorage.setItem("gameScore", scoreCount.toString());
+
     // Select the input element to get the value of the user initials
     document.getElementById("submit").addEventListener("click", function () {
 
@@ -89,7 +94,9 @@ function endOfQuiz() {
     });
 
     gameCount++;
-    
+    // store scoreCount in local storage to picked up in scores.js
+    latestGameCount = localStorage.setItem("gameCount", gameCount);
+
 }
 
 function showNextQuestion() {
@@ -149,15 +156,3 @@ document.querySelector(".buttons").addEventListener("click", function (event) {
     // The index is incremented to correspond to the next question
     i++;
 });
-
-
-// add condition to stop counter if all questions are answered before time out
-
-// add a message saying the count has stopped
-
-// add a message giving results
-
-// add feature if correct add five seconds
-
-// add feature if incorrect subtract five seconds
-

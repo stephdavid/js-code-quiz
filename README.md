@@ -68,6 +68,10 @@ TO BE REVISTED: Will try to programmically create them using a css counter with 
   
 * As well, a bit of housekeeping - in questions.js replaced what became the duplicate text to its object location - this is one example of refactoring as I go long. At some point the redundant anchor tags will be removed. It's kinda sad to see code I working so lovingly on, just thrown away. 
 
+* In my daily email from Medium.com this Saturday morning was the article "Speed Up JavaScript Array Processing". Switched from pop.
+
+* renderLastElement() or getItem("gameScore")?
+
 
 
 ### Code Logic - What are we trying to do
@@ -130,5 +134,25 @@ JavaScript Array sort()
 https://www.w3schools.com/jsref/jsref_sort.asp<br>
 
 JavaScript Array pop()
-https://www.w3schools.com/jsref/jsref_pop.asp
+https://www.w3schools.com/jsref/jsref_pop.asp<br>
+
+JavaScript Number toString()
+https://www.w3schools.com/jsref/jsref_tostring_number.asp<br>
+
+Storage: setItem() method
+https://developer.mozilla.org/en-US/docs/Web/API/Storage/setItem<br>
+
+Storage getItem() Method
+https://www.w3schools.com/jsref/met_storage_getitem.asp<br>
+
+Speed Up JavaScript Array Processing
+https://medium.com/@techsuneel99/speed-up-javascript-array-processing-1f878158f4f1<br>
+
+4 Ways to Remove the Last Element from an Array in JavaScript
+https://medium.com/@iamdarius/4-ways-to-remove-the-last-element-from-an-array-in-javascript-17749b12be0c<br>
+
+LocalStorage-Sign-up-form - renderLastRegistered() function
+https://github.com/EvgeniiI7/LocalStorage-Sign-up-form<br>
+
+
 
