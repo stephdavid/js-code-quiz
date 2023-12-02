@@ -51,3 +51,8 @@ document.getElementById("highscore5").textContent = scores[4] || "";
 }
 // Call the function after retrieving local storage values
 displayFiveHighestScores();
+
+document.getElementById("clear").addEventListener("click", function () {
+    localStorage.clear();
+    location.reload(true);
+});
