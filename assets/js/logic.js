@@ -85,11 +85,11 @@ function endOfQuiz() {
         let userInitials = document.getElementById("initials").value;
         userScoreTxt = userInitials + " - " + gameScore;
 
-      //  let userScoreSpan = document.getElementById("game-score");
-     //   userScoreSpan.textContent = userInitials + " - " + score + " questions out of " + maxScore;
-     //  userScoreSpan.setAttribute("class", "");
+        //  let userScoreSpan = document.getElementById("game-score");
+        //   userScoreSpan.textContent = userInitials + " - " + score + " questions out of " + maxScore;
+        //  userScoreSpan.setAttribute("class", "");
         scores.push(score);
-       console.log("Scores: ", scores);
+        console.log("Scores: ", scores);
 
         // place the updated scores array into local storage
         const stringifiedScores = JSON.stringify(scores);
@@ -104,6 +104,10 @@ function endOfQuiz() {
     // store updated gameCount in local storage to picked up in scores.js
     latestGameCount = localStorage.setItem("gameCount", gameCount.toString());
     //console.log(latestGameCount);
+
+    document.getElementById("submit").onclick = function () {
+        location.href = "highscores.html";
+    };
 }
 
 function showNextQuestion() {
