@@ -105,7 +105,7 @@ TO BE REVISTED: Will try to programmically create them using a css counter with 
 
 * Squashed the bug. It's something to do with how the question titles are ordered. It has to be in descending order. Who knows why?
 
-
+* Added code to disable the submit button until the user adds their initials. For minimum accessibility, provided an explanation.
 
 
 
@@ -215,6 +215,20 @@ https://medium.com/@devdo/how-to-force-refresh-a-page-in-javascript-e282c308f214
 Difference Between preventDefault and stopPropagation in JavaScript
 https://iq.js.org/questions/javascript/whats-the-difference-between-eventpreventdefault-and-eventstoppropagation-methods<br>
 
+How to disable or enable buttons using javascript and jquery
+https://flexiple.com/javascript/disable-button-javascript<br>
+
+Never forget type="button" on generated buttons!
+https://lea.verou.me/blog/2018/05/never-forget-typebutton-on-generated-buttons/<br>
+
+Never, ever disable buttons — Why not?
+https://uxdesign.cc/never-ever-disable-buttons-part-1-why-not-73d16a0fb32b<br>
+
+Never, ever disable buttons — Requirements for an accessible solution
+https://uxdesign.cc/never-ever-disable-buttons-requirements-for-an-accessible-solution-acaf9c5191f9<br>
+
+Never, ever disable buttons — More accessible alternatives
+https://uxdesign.cc/never-ever-disable-buttons-more-accessible-alternatives-5f415d79ce40<br>
 
 
 

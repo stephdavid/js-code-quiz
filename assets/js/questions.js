@@ -29,7 +29,7 @@ let questions = [
     {
         question: "A very useful tool used during development and debugging for printing content to the debugger is:",
         answerChoices: ["JavaScript", "terminal/bash", "for loops", "console.log"],
-        correctChoice: "console.log"// liitle bug was here, has something to do with the order of the questions???
+        correctChoice: "console.log"// liitle bug was here, has something to do with the order of the questions?
     }
 ];
 

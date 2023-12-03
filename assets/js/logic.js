@@ -49,7 +49,7 @@ function showQuestionScreen() {
     startScreen.setAttribute("class", "hide");
 
     quizQuestionsScreen.setAttribute("class", "show");
-    //questionTitle1.setAttribute("class", "show");
+    questionTitle1.setAttribute("class", "show");
 
     setTime();
 
@@ -81,8 +81,8 @@ function endOfQuiz() {
     const gameScore = document.getElementById("game-score");
     gameScore.textContent = score + " / " + maxScore;
 
-    
-    
+
+
     // Select the input element to get the value of the user initials
     document.getElementById("submit").addEventListener("click", function (event) {
         event.preventDefault;
@@ -109,7 +109,20 @@ function endOfQuiz() {
 
     // store updated gameCount in local storage to picked up in scores.js
     latestGameCount = localStorage.setItem("gameCount", gameCount.toString());
-    //console.log(latestGameCount);
+
+    let button = document.getElementById("submit");
+    let input = document.getElementById("initials");
+
+    button.disabled = true;
+    input.addEventListener("change", stateHandle);
+
+    function stateHandle() {
+        if (document.getElementById("initials").value === "") {
+            button.disabled = true;
+        } else {
+            button.disabled = false;
+        }
+    }
 
     document.getElementById("submit").onclick = function () {
         location.href = "highscores.html";
