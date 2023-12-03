@@ -1,5 +1,4 @@
 
-
 function displayFiveHighestScores() {
 
     const ol = document.getElementById("highscores");
@@ -38,14 +37,8 @@ function displayFiveHighestScores() {
         // Remove the smallest value in the array
         scores.pop();
     }
-
-     
-
-
+  
     // Update the highscore list
-
-
-
     document.getElementById("highscore1").textContent = initials[0] + "-" + scores[0] || "";
     document.getElementById("highscore2").textContent = initials[0] + "-" + scores[1] || "";
     document.getElementById("highscore3").textContent = initials[0] + "-" + scores[2] || "";

@@ -76,12 +76,13 @@ TO BE REVISTED: Will try to programmically create them using a css counter with 
 
 * Late Saturday evening. The array was displaying as an array of strings (which inlcuded commas and square brackets) not numbers. A thorny problem - I resorted to a lengthy chat with ChatGPT over a few hours. But this bit is sorted. More coding to do. This has become a two-pizza project.
 
-* Added an onclick function to redirect to the highscores.html page 
+* Added an onclick function to redirect to the highscores.html page. 
 
-* Created the button event listener to clear the highest scores (localStorage.clear) and reload the page (location.reload(true))
+* Created the button event listener to clear the highest scores (localStorage.clear) and reload the page (location.reload(true)).
 
 * Sunday morning. I created an initials array and put it in local storage. TO DO: keep the individuals initials connected to the results.
 
+* Change back from a link back to index.html to a button link to index.html.
 
 
 ### Code Logic - What are we trying to do
