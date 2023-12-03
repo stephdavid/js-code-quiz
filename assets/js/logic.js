@@ -13,7 +13,7 @@ const scores = scoresString ? JSON.parse(scoresString) : [];
 //Countdown timer
 const main = document.getElementById("main");
 
-let secondsLeft = 30;
+let secondsLeft = 5;
 
 function setTime() {
     // Sets interval in variable
@@ -24,8 +24,15 @@ function setTime() {
         if (secondsLeft === 0) {
             // Stops execution of action at set interval
             clearInterval(timerInterval);
-            // Calls function to create and append image
-            //  sendMessage();
+            
+            alert("Time's up.");
+
+
+            const quizQuestionsScreen = document.getElementById("questions");
+            quizQuestionsScreen.setAttribute("class", "hide");
+            const endScreen = document.getElementById("end-screen");
+            endScreen.setAttribute("class", "show");
+            determineScore();
         }
 
     }, 1000);
@@ -36,9 +43,6 @@ function setTime() {
 function displayCountdown() {
     time.textContent = " ";
 }
-
-// TO DO = add time out message and subsequent action 
-
 
 function showQuestionScreen() {
     // hide the paragraph.show and button #show
@@ -61,7 +65,6 @@ function showQuestionScreen() {
 }
 
 function endOfQuiz() {
-
     // hide questions section
     // show end screen - is this your final score - if yes display highest 5 scores if no play another game
     alert("End of Quiz!");
@@ -72,16 +75,17 @@ function endOfQuiz() {
     showTime.textContent = "";
     time.textContent = " ";
 
-    const quizQuestionsScreen = document.getElementById("questions");
+    quizQuestionsScreen = document.getElementById("questions");
     quizQuestionsScreen.setAttribute("class", "hide");
-    const endScreen = document.getElementById("end-screen");
+    endScreen = document.getElementById("end-screen");
     endScreen.setAttribute("class", "show");
+    determineScore();
+}
 
+function determineScore(){
     const maxScore = 5;
     const gameScore = document.getElementById("game-score");
     gameScore.textContent = score + " / " + maxScore;
-
-
 
     // Select the input element to get the value of the user initials
     document.getElementById("submit").addEventListener("click", function (event) {
