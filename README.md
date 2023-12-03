@@ -82,7 +82,9 @@ TO BE REVISTED: Will try to programmically create them using a css counter with 
 
 * Sunday morning. I created an initials array and put it in local storage. TO DO: keep the individuals initials connected to the results.
 
-* Change back from a link back to index.html to a button link to index.html.
+* Changed back from a link back to index.html to a button link to index.html.
+
+* Change the questions ordered <ol> list to buttons and remove unnecessary anchors <a> - in my Captain Picard voice "Belay that order!" - changed the CSS.
 
 
 ### Code Logic - What are we trying to do

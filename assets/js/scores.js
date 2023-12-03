@@ -2,6 +2,7 @@
 function displayFiveHighestScores() {
 
     const ol = document.getElementById("highscores");
+    ol.setAttribute("class", "highscore");
 
     const highscore1 = document.createElement("li");
     const highscore2 = document.createElement("li");
@@ -39,11 +40,21 @@ function displayFiveHighestScores() {
     }
   
     // Update the highscore list
-    document.getElementById("highscore1").textContent = initials[0] + "-" + scores[0] || "";
-    document.getElementById("highscore2").textContent = initials[0] + "-" + scores[1] || "";
-    document.getElementById("highscore3").textContent = initials[0] + "-" + scores[2] || "";
-    document.getElementById("highscore4").textContent = initials[0] + "-" + scores[3] || "";
-    document.getElementById("highscore5").textContent = initials[0] + "-" + scores[4] || "";
+    if (scores[0]) {
+        document.getElementById("highscore1").textContent = initials[0] + "-" + scores[0];
+    }
+    if (scores[1]) {
+        document.getElementById("highscore2").textContent = initials[0] + "-" + scores[1];
+    }
+    if (scores[2]) {
+        document.getElementById("highscore3").textContent = initials[0] + "-" + scores[2] || "";
+    }
+    if (scores[3]) {
+        document.getElementById("highscore4").textContent = initials[0] + "-" + scores[3];
+    }
+    if (scores[4]) {
+        document.getElementById("highscore5").textContent = initials[0] + "-" + scores[4] || "";
+    }
 }
 // Call the function after retrieving local storage values
 displayFiveHighestScores();
