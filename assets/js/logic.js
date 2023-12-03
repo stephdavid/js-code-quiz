@@ -80,6 +80,8 @@ function endOfQuiz() {
     const gameScore = document.getElementById("game-score");
     gameScore.textContent = score + " / " + maxScore;
 
+    
+    
     // Select the input element to get the value of the user initials
     document.getElementById("submit").addEventListener("click", function () {
         let initials = document.getElementById("initials").value;

@@ -76,6 +76,12 @@ TO BE REVISTED: Will try to programmically create them using a css counter with 
 
 * Late Saturday evening. The array was displaying as an array of strings (which inlcuded commas and square brackets) not numbers. A thorny problem - I resorted to a lengthy chat with ChatGPT over a few hours. But this bit is sorted. More coding to do. This has become a two-pizza project.
 
+* Added an onclick function to redirect to the highscores.html page 
+
+* Created the button event listener to clear the highest scores (localStorage.clear) and reload the page (location.reload(true))
+
+* Sunday morning. I created an initials array and put it in local storage. TO DO: keep the individuals initials connected to the results.
+
 
 
 ### Code Logic - What are we trying to do
@@ -166,6 +172,20 @@ https://www.freecodecamp.org/news/how-to-store-objects-or-arrays-in-browser-loca
 
 ChatGBT-3.5
 https://chat.openai.com/<br>
+
+How can I make a button redirect my page to another page?
+https://stackoverflow.com/questions/16562577/how-can-i-make-a-button-redirect-my-page-to-another-page<br>
+
+HTML Button onclick – JavaScript Click Event Tutorial
+https://www.freecodecamp.org/news/html-button-onclick-javascript-click-event-tutorial/<br>
+
+Storage: clear() method
+https://developer.mozilla.org/en-US/docs/Web/API/Storage/clear<br>
+
+How to force refresh a page in JavaScript
+https://medium.com/@devdo/how-to-force-refresh-a-page-in-javascript-e282c308f214<br>
+
+
 
 
 
