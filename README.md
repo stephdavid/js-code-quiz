@@ -84,43 +84,47 @@ TO BE REVISTED: Will try to programmically create them using a css counter with 
 
 * Changed back from a link back to index.html to a button link to index.html.
 
-* Change the questions ordered <ol> list to buttons and remove unnecessary anchors <a> - in my Captain Picard voice "Belay that order!" - changed the CSS to more specific selectors instead.
+* Change the questions ordered list to buttons and remove unnecessary anchor tags - in my best Capt. Picard voice "Belay that order!" - I changed the CSS to more specific selectors instead.
 
-* Anchor tags for the question options are not necessary, but they've left in as they are too ingrained in the logic and they're not doing any harm - knitting analogy - unravelling several rows to remove an minor miss stich that won't be seen.
-
-* Added the time out alert and following action. While there is a redirect to the end screen section, when initials are added and the submit button clicke the highest scores and intials are not displayed. I think I need to rejig 
+* Anchor tags for the question options are not necessary, but I've left them in as they are ingrained in the logic and they're not doing any harm - knitting analogy - unravelling several rows to remove an minor miss stich that won't be seen.
 
 * TO DO:
-1.	Add/lose seconds - if correct add five seconds, if incorrect subtract five seconds
-2.	Disable the button until the user adds initials - a onkeyup event?
-3.	Add a confirm message saying the count has stopped time out try again?
-4.	Concatenate the initials with the score - keep initials of previous players
-5.	Change modal messages to html messages on page
-6.	event propagation?
-7.	isolate the start button from the others and for them apply the provided style
+    1.	Add/lose seconds - if correct add five seconds, if incorrect subtract five seconds
+    2.	Disable the button until the user adds initials - a onkeyup event?
+    3.	Add a confirm message saying the count has stopped time out try again?
+    4.	Concatenate the initials with the score - keep initials of previous players
+    5.	event propagation?
+    6.	isolate the start button from the others and for them apply the provided style
 
-* Added event.prevent default to event handlers to prevent event bubbling.
+* Added **event.prevent default** to event handlers to prevent event bubbling.
 
-* Isolated the start button from the others by adding #start to the css button selector. Returned the provided button styles. The question options have a different treatment which stays as is.
+* Isolated the start button from the others by adding **#start** to the css **button** selector. Returned the provided button styles. The question options have a different treatment which stays as is.
 
-* Now how did console.log replace the first question? - a new bug aargh! It's not a browser or cache problem because the same thing happens in Firefox and Edge
+* Now, how did console.log replace the first question? - a new bug 🐛 aargh! It's not a browser or cache problem because the same thing happens in Firefox and Edge ????
 
-* Squashed the bug. It's something to do with how the question titles are ordered. It has to be in descending order. Who knows why?
+* Squashed the bug.🐛 It's something to do with how the question titles are ordered. It has to be in descending order. Who knows why?
 
-* Added code to disable the submit button until the user adds their initials. For minimum accessibility, provided an explanation.
+* Added code to disable the submit button until the user adds their initials. For minimum accessibility, also provided an explanation.
 
-
-
+* Added the time out confirm modal and following action. While there is a redirect to the end screen section, when initials are added and the submit button clicks the highest scores and intitials are not displayed. I decided to simply direct the user to the start screen if they want to start again (press ok), if they don't want to start again (press cancel), an alert "bye".
+  
+* Two complex issues to be handled at a later date:
+    1. Adding seconds if a question is correct, subtracting seconds when incorrect
+    2. Concatenating the initials with the score while maintaining initials of previous players
 
 
 ### Code Logic - What are we trying to do
 
-1. A quiz with a timer
-2. The user presses a button to start the quiz.
-3. A screen with a question and four possible answers is presented.
-4. The user clicks the button that they believe is the answer to each question - the colour of the button changes...
-5. The next screen displays, and indicates if the answer was correct or incorrect.
-6. After five rounds, the quiz finishes and displays high scores.The user adds their intials, then clears their intials and starts over.
+1. This is a quiz with a timer.
+2. The user presses the start button to start the quiz.
+3. A screen with a question and four possible answers is presented and the timer starts to count down - the countdown is displayed on the top right of the screen.
+4. The user clicks the button that they believe is the answer to each question
+5. An alert model pops up and indicates if the answer was correct or incorrect. If incorrect, the correct answer is provided. The next screen displays.
+6. If the timer times out, a prompt modal is displayed - the user is asked whether they wish to start again. If yes, the Start Screen is displayed, and if no, an alert "bye" message.
+7. After five questions, the quiz finishes and displays the score. The user is asked to add their intials before clicking the Highest Scores button. They can also access the Highscores page by a link on the top right of the screen.
+8. Once in the Highscores screen, the five highest answers are displayed alongside the users' initials. 
+9. The user can clear the high scores by clicking the Clear Highscores button.
+10. The user can choose to play again by pressing the Play Again? button
 
 
 
@@ -231,6 +235,11 @@ https://uxdesign.cc/never-ever-disable-buttons-requirements-for-an-accessible-so
 
 Never, ever disable buttons — More accessible alternatives
 https://uxdesign.cc/never-ever-disable-buttons-more-accessible-alternatives-5f415d79ce40<br>
+
+setInterval() global function
+https://developer.mozilla.org/en-US/docs/Web/API/setInterval<br>
+
+
 
 
 

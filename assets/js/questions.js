@@ -35,7 +35,7 @@ let questions = [
 
 
 // This is the section (x5) that holds the quiz questions
-const quizQuestionsScreen = document.getElementById("questions");
+let quizQuestionsScreen = document.getElementById("questions");
 
 // get the heading (h2) element and create the five quiz questions as values
 
