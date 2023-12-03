@@ -17,12 +17,10 @@ button {
   display: inline-block;
   margin: 5px;
   cursor: pointer;
-  font-size: 150%;
-  /*background-color: #563d7c;*/
-  background-image: radial-gradient(100% 100% at 100% 0, #865ec2 0, #9529b3 100%);
-  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  font-size: 100%;
+  background-color: #563d7c;
   border-radius: 5px;
-  padding:25px 15px;
+  padding: 10px;
   color: white;
   border: 0;
   transition: background-color 0.1s;
@@ -31,6 +29,13 @@ button {
 button:hover {
   background-color: #8570a5;
   box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #9529b3 0 -3px 0 inset;
+}
+
+button#start {
+  font-size: 150%;
+  background-image: radial-gradient(100% 100% at 100% 0, #865ec2 0, #9529b3 100%);
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  padding: 25px 15px;
 }
 
 ::marker {

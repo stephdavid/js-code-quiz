@@ -90,12 +90,21 @@ TO BE REVISTED: Will try to programmically create them using a css counter with 
 
 * TO DO:
 1.	Add/lose seconds - if correct add five seconds, if incorrect subtract five seconds
-2.	Disable the button until initials added - a onkeyup event?
+2.	Disable the button until the user adds initials - a onkeyup event?
 3.	Add a confirm message saying the count has stopped time out try again?
 4.	Concatenate the initials with the score - keep initials of previous players
 5.	Change modal messages to html messages on page
 6.	event propagation?
 7.	isolate the start button from the others and for them apply the provided style
+
+* Added event.prevent default to event handlers to prevent event bubbling.
+
+* Isolated the start button from the others by adding #start to the css button selector. Returned the provided button styles. The question options have a different treatment which stays as is.
+
+* Now how did console.log replace the first question? - a new bug aargh!
+
+
+
 
 
 
@@ -199,6 +208,9 @@ https://developer.mozilla.org/en-US/docs/Web/API/Storage/clear<br>
 
 How to force refresh a page in JavaScript
 https://medium.com/@devdo/how-to-force-refresh-a-page-in-javascript-e282c308f214<br>
+
+Difference Between preventDefault and stopPropagation in JavaScript
+https://iq.js.org/questions/javascript/whats-the-difference-between-eventpreventdefault-and-eventstoppropagation-methods<br>
 
 
 
