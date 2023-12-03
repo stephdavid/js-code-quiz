@@ -37,9 +37,6 @@ function displayCountdown() {
     time.textContent = " ";
 }
 
-// TO DO = add time out message and subsequent action 
-
-
 function showQuestionScreen() {
     // hide the paragraph.show and button #show
     // show the paragraph section and the question ordered list
