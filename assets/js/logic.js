@@ -83,7 +83,8 @@ function endOfQuiz() {
     
     
     // Select the input element to get the value of the user initials
-    document.getElementById("submit").addEventListener("click", function () {
+    document.getElementById("submit").addEventListener("click", function (event) {
+        event.preventDefault;
         let initials = document.getElementById("initials").value;
         userScoreTxt = initials + " - " + score;
 
@@ -101,7 +102,6 @@ function endOfQuiz() {
         localStorage.setItem("scores", stringifiedScores);
 
         console.log("Scores: ", scores);
-
     });
 
     gameCount++;
@@ -145,7 +145,8 @@ function showNextQuestion() {
     }
 }
 
-document.getElementById("start").addEventListener("click", function () {
+document.getElementById("start").addEventListener("click", function (event) {
+    event.preventDefault;
     showQuestionScreen();
 });
 
@@ -154,6 +155,7 @@ let i = 0;
 
 // Add an event listener to capture the the user selection
 document.querySelector(".buttons").addEventListener("click", function (event) {
+    event.preventDefault;
     // the event is stored in a variable
     let selectedAnswer = event.target.textContent;
     // Determine if the user selection matches the object property correctChoice and then carry out the respective actions

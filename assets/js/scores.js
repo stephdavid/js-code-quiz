@@ -59,7 +59,8 @@ function displayFiveHighestScores() {
 // Call the function after retrieving local storage values
 displayFiveHighestScores();
 
-document.getElementById("clear").addEventListener("click", function () {
+document.getElementById("clear").addEventListener("click", function (event) {
+    event.preventDefault;
     localStorage.clear();
     location.reload(true);
 });

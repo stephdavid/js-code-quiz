@@ -5,7 +5,7 @@ let questions = [
     {
         question: "Commonly used data types do not include:",
         answerChoices: ["strings", "booleans", "alerts", "numbers"],
-        correctChoice: "alerts",
+        correctChoice: "alerts"
     },
 
     {

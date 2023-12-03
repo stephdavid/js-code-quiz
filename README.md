@@ -84,7 +84,19 @@ TO BE REVISTED: Will try to programmically create them using a css counter with 
 
 * Changed back from a link back to index.html to a button link to index.html.
 
-* Change the questions ordered <ol> list to buttons and remove unnecessary anchors <a> - in my Captain Picard voice "Belay that order!" - changed the CSS.
+* Change the questions ordered <ol> list to buttons and remove unnecessary anchors <a> - in my Captain Picard voice "Belay that order!" - changed the CSS to more specific selectors instead.
+
+* Anchor tags for the question options are not necessary, but they've left in as they are too ingrained in the logic and they're not doing any harm - knitting analogy - unravelling several rows to remove an minor miss stich that won't be seen.
+
+* TO DO:
+1.	Add/lose seconds - if correct add five seconds, if incorrect subtract five seconds
+2.	Disable the button until initials added - a onkeyup event?
+3.	Add a confirm message saying the count has stopped time out try again?
+4.	Concatenate the initials with the score - keep initials of previous players
+5.	Change modal messages to html messages on page
+6.	event propagation?
+7.	isolate the start button from the others and for them apply the provided style
+
 
 
 ### Code Logic - What are we trying to do
