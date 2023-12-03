@@ -49,6 +49,7 @@ function showQuestionScreen() {
     startScreen.setAttribute("class", "hide");
 
     quizQuestionsScreen.setAttribute("class", "show");
+    //questionTitle1.setAttribute("class", "show");
 
     setTime();
 
@@ -95,13 +96,13 @@ function endOfQuiz() {
         initialsArr = localStorage.setItem("initials", stringifiedInitialsArr);
 
         scores.push(score);
-        console.log("Scores: ", scores);
+        //console.log("Scores: ", scores);
 
         // place the updated scores array into local storage
         const stringifiedScores = JSON.stringify(scores);
         localStorage.setItem("scores", stringifiedScores);
 
-        console.log("Scores: ", scores);
+        //console.log("Scores: ", scores);
     });
 
     gameCount++;

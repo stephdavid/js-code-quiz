@@ -29,29 +29,32 @@ let questions = [
     {
         question: "A very useful tool used during development and debugging for printing content to the debugger is:",
         answerChoices: ["JavaScript", "terminal/bash", "for loops", "console.log"],
-        correctChoice: "console.log"
-    },
-]
+        correctChoice: "console.log"// liitle bug was here, has something to do with the order of the questions???
+    }
+];
 
 
 // This is the section (x5) that holds the quiz questions
 const quizQuestionsScreen = document.getElementById("questions");
 
 // get the heading (h2) element and create the five quiz questions as values
+
+// DO NOT CHANGE THE ORDER!!
+
 let questionTitle5 = document.getElementById("question-title");
-questionTitle5.textContent = questions[0].correctChoice;
+questionTitle5.textContent = questions[4].question;
 
 let questionTitle4 = document.getElementById("question-title");
-questionTitle4.textContent = questions[1].correctChoice;
+questionTitle4.textContent = questions[3].question;
 
 let questionTitle3 = document.getElementById("question-title");
-questionTitle3.textContent = questions[2].correctChoice;
+questionTitle3.textContent = questions[2].question;
 
 let questionTitle2 = document.getElementById("question-title");
-questionTitle2.textContent = questions[3].correctChoice;
+questionTitle2.textContent = questions[1].question;
 
 let questionTitle1 = document.getElementById("question-title");
-questionTitle1.textContent = questions[4].correctChoice;
+questionTitle1.textContent = questions[0].question;
 
 //  Append the titles to the questions section
 quizQuestionsScreen.appendChild(questionTitle1);

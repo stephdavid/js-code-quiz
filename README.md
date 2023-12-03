@@ -101,7 +101,10 @@ TO BE REVISTED: Will try to programmically create them using a css counter with 
 
 * Isolated the start button from the others by adding #start to the css button selector. Returned the provided button styles. The question options have a different treatment which stays as is.
 
-* Now how did console.log replace the first question? - a new bug aargh!
+* Now how did console.log replace the first question? - a new bug aargh! It's not a browser or cache problem because the same thing happens in Firefox and Edge
+
+* Squashed the bug. It's something to do with how the question titles are ordered. It has to be in descending order. Who knows why?
+
 
 
 
