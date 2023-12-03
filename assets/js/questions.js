@@ -5,7 +5,7 @@ let questions = [
     {
         question: "Commonly used data types do not include:",
         answerChoices: ["strings", "booleans", "alerts", "numbers"],
-        correctChoice: "alerts"
+        correctChoice: "alerts",
     },
 
     {
@@ -32,6 +32,7 @@ let questions = [
         correctChoice: "console.log"
     },
 ]
+
 
 // This is the section (x5) that holds the quiz questions
 const quizQuestionsScreen = document.getElementById("questions");

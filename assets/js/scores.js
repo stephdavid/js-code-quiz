@@ -32,6 +32,11 @@ function displayFiveHighestScores() {
     const scoresString = localStorage.getItem("scores");
     const scores = scoresString ? JSON.parse(scoresString) : [];
 
+    const initialsString = localStorage.getItem("initials");
+    const initials = initialsString ? JSON.parse(initialsString) : [];
+    
+    console.log(initials);
+
     //function displayFiveHighestScores() {
     if (latestGameCount >= 5) {
         // Sort the array in descending order
@@ -41,13 +46,13 @@ function displayFiveHighestScores() {
     }
 
 
-// Update the highscore list
+    // Update the highscore list
 
-document.getElementById("highscore1").textContent = scores[0] || "";
-document.getElementById("highscore2").textContent = scores[1] || "";
-document.getElementById("highscore3").textContent = scores[2] || "";
-document.getElementById("highscore4").textContent = scores[3] || "";
-document.getElementById("highscore5").textContent = scores[4] || "";
+    document.getElementById("highscore1").textContent = initials[0] + "-" + scores[0] || "";
+    document.getElementById("highscore2").textContent = initials[0] + "-" + scores[1] || "";
+    document.getElementById("highscore3").textContent = initials[0] + "-" + scores[2] || "";
+    document.getElementById("highscore4").textContent = initials[0] + "-" + scores[3] || "";
+    document.getElementById("highscore5").textContent = initials[0] + "-" + scores[4] || "";
 }
 // Call the function after retrieving local storage values
 displayFiveHighestScores();

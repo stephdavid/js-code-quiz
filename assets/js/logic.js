@@ -5,6 +5,7 @@ let score = 0;
 let gameCount = localStorage.getItem("gameCount") || 0;
 let highScore = 0;
 let latestScore = "";
+let initialsArr = [];
 
 const scoresString = localStorage.getItem("scores");
 const scores = scoresString ? JSON.parse(scoresString) : [];
@@ -49,7 +50,7 @@ function showQuestionScreen() {
 
     quizQuestionsScreen.setAttribute("class", "show");
 
-    let intervalId = setTime();
+    setTime();
 
     // Multiple ordered lists are generated - these need to be hidden and eventually fixed
     ol4.setAttribute("class", "ol4 hide");
@@ -81,13 +82,15 @@ function endOfQuiz() {
 
     // Select the input element to get the value of the user initials
     document.getElementById("submit").addEventListener("click", function () {
+        let initials = document.getElementById("initials").value;
+        userScoreTxt = initials + " - " + score;
 
-        let userInitials = document.getElementById("initials").value;
-        userScoreTxt = userInitials + " - " + gameScore;
+        initialsArr.push(initials);
 
-        //  let userScoreSpan = document.getElementById("game-score");
-        //   userScoreSpan.textContent = userInitials + " - " + score + " questions out of " + maxScore;
-        //  userScoreSpan.setAttribute("class", "");
+        // initials placed in local storage to picked up in scores.js
+        const stringifiedInitialsArr = JSON.stringify(initialsArr);
+        initialsArr = localStorage.setItem("initials", stringifiedInitialsArr);
+
         scores.push(score);
         console.log("Scores: ", scores);
 
