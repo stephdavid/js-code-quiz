@@ -88,6 +88,8 @@ TO BE REVISTED: Will try to programmically create them using a css counter with 
 
 * Anchor tags for the question options are not necessary, but they've left in as they are too ingrained in the logic and they're not doing any harm - knitting analogy - unravelling several rows to remove an minor miss stich that won't be seen.
 
+* Added the time out alert and following action. While there is a redirect to the end screen section, when initials are added and the submit button clicke the highest scores and intials are not displayed. I think I need to rejig 
+
 * TO DO:
 1.	Add/lose seconds - if correct add five seconds, if incorrect subtract five seconds
 2.	Disable the button until the user adds initials - a onkeyup event?

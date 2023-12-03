@@ -13,7 +13,7 @@ const scores = scoresString ? JSON.parse(scoresString) : [];
 //Countdown timer
 const main = document.getElementById("main");
 
-let secondsLeft = 5;
+let secondsLeft = 30;
 
 function setTime() {
     // Sets interval in variable
@@ -24,15 +24,8 @@ function setTime() {
         if (secondsLeft === 0) {
             // Stops execution of action at set interval
             clearInterval(timerInterval);
-            
-            alert("Time's up.");
-
-
-            const quizQuestionsScreen = document.getElementById("questions");
-            quizQuestionsScreen.setAttribute("class", "hide");
-            const endScreen = document.getElementById("end-screen");
-            endScreen.setAttribute("class", "show");
-            determineScore();
+            // Calls function to create and append image
+            //  sendMessage();
         }
 
     }, 1000);
@@ -43,6 +36,9 @@ function setTime() {
 function displayCountdown() {
     time.textContent = " ";
 }
+
+// TO DO = add time out message and subsequent action 
+
 
 function showQuestionScreen() {
     // hide the paragraph.show and button #show
@@ -64,25 +60,12 @@ function showQuestionScreen() {
     ol1.setAttribute("class", "ol1 hide");
 }
 
-function endOfQuiz() {
-    // hide questions section
-    // show end screen - is this your final score - if yes display highest 5 scores if no play another game
-    alert("End of Quiz!");
-    // stop timer
-    clearInterval(timerInterval);
-    // hide Timer:
-    const showTime = document.querySelector(".timer");
-    showTime.textContent = "";
-    time.textContent = " ";
-
-    quizQuestionsScreen = document.getElementById("questions");
+function displayScore() {
+    const quizQuestionsScreen = document.getElementById("questions");
     quizQuestionsScreen.setAttribute("class", "hide");
-    endScreen = document.getElementById("end-screen");
+    const endScreen = document.getElementById("end-screen");
     endScreen.setAttribute("class", "show");
-    determineScore();
-}
 
-function determineScore(){
     const maxScore = 5;
     const gameScore = document.getElementById("game-score");
     gameScore.textContent = score + " / " + maxScore;
@@ -99,14 +82,6 @@ function determineScore(){
         const stringifiedInitialsArr = JSON.stringify(initialsArr);
         initialsArr = localStorage.setItem("initials", stringifiedInitialsArr);
 
-        scores.push(score);
-        //console.log("Scores: ", scores);
-
-        // place the updated scores array into local storage
-        const stringifiedScores = JSON.stringify(scores);
-        localStorage.setItem("scores", stringifiedScores);
-
-        //console.log("Scores: ", scores);
     });
 
     gameCount++;
@@ -131,6 +106,19 @@ function determineScore(){
     document.getElementById("submit").onclick = function () {
         location.href = "highscores.html";
     };
+}
+
+function endOfQuiz() {
+    // inform the user that the quiz is over
+    // shut down and hide the timer
+    alert("End of Quiz!");
+    // stop timer
+    clearInterval(timerInterval);
+    // hide Timer:
+    const showTime = document.querySelector(".timer");
+    showTime.textContent = "";
+    time.textContent = " ";
+    displayScore();
 }
 
 function showNextQuestion() {
@@ -159,6 +147,12 @@ function showNextQuestion() {
         choice4d.textContent = choice5d.textContent;
 
     } else {
+        scores.push(score);
+
+        // place the updated scores array into local storage
+        const stringifiedScores = JSON.stringify(scores);
+        localStorage.setItem("scores", stringifiedScores);
+
         endOfQuiz();
     }
 }
