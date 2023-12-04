@@ -22,10 +22,18 @@ function setTime() {
         time.textContent = secondsLeft + " seconds left till quiz is over.";
 
         if (secondsLeft === 0) {
-            // Stops execution of action at set interval
+            let timesUp = confirm("Time's Up! Start again?");
             clearInterval(timerInterval);
-            // Calls function to create and append image
-            //  sendMessage();
+            if (timesUp) {
+                quizQuestionsScreen = document.getElementById("questions");
+                quizQuestionsScreen.setAttribute("class", "hide");
+                startScreen = document.getElementById("start-screen");
+                startScreen.setAttribute("class", "show");
+                startTimer();
+            } else {
+                alert(Ok.Bye)
+                return;
+            }
         }
 
     }, 1000);
