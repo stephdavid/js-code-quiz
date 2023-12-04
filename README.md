@@ -3,9 +3,47 @@
 
 Challenge - build a timed coding quiz with multiple-choice questions which will use dynamically updated HTML and CSS from JavaScript code and have a clean, polished, and responsive user interface.
 
+### Webpage
+
+https://stephdavid.github.io/js-code-quiz/
+
+
+### Screenshots
+
+
+![start page ](start-page.png)
+
+
+![question two ](question-two.png)
+
+
+![end section showing score and initials input element and high scores button](end-section.png)
+
+
+![high scores page ](highscores-page.png)
+
+
+![initials bug on high scores page ](initials-bug.png)
+
+### Acceptance Criteria
+
+GIVEN I am taking a code quiz
+
+WHEN I click the start button
+THEN a timer starts and I am presented with a question  ✔️
+WHEN I answer a question
+THEN I am presented with another question  ✔️
+WHEN I answer a question incorrectly
+THEN time is subtracted from the clock ❌
+WHEN all questions are answered or the timer reaches 0
+THEN the game is over ✔️
+WHEN the game is over
+THEN I can save my initials and score ✔️
+
+
 ### Process
 
-* To start, I've created and cloned a GitHub repo, and started writing this README. :ballot_box_with_check:
+* To start, I've created and cloned a GitHub repo, and started writing this README.
 
 * As of this Sunday morning (Nov 26), I haven't yet worked out the logic. I think that creating the "building blocks", i.e. the set of questions from the extracted frames of the gif image, might be helpful in doing this.
 
@@ -112,6 +150,9 @@ TO BE REVISTED: Will try to programmically create them using a css counter with 
     1. Adding seconds if a question is correct, subtracting seconds when incorrect
     2. Concatenating the initials with the score while maintaining initials of previous players
 
+* Another attempt at adding/subtracting sections to no avail. Added the code following time out again as it had disappeared for some reason.
+  
+* And it's a wrap for now!
 
 ### Code Logic - What are we trying to do
 
