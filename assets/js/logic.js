@@ -179,9 +179,13 @@ document.querySelector(".buttons").addEventListener("click", function (event) {
     if (selectedAnswer === questions[i].correctChoice) {
         score++;
         alert("Correct Answer!");
+        // Add 10 seconds to the timer for a correct answer
+        secondsLeft += 10;
     } else {
 
         alert("Incorrect Answer! The correct answer is " + questions[i].correctChoice + ".");
+        // Subtract 10 seconds from the timer for an incorrect answer
+        secondsLeft -= 10;
     }
 
     // Once the loop has completed then display the next question
