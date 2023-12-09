@@ -184,6 +184,8 @@ TO BE REVISTED: Will try to programmically create them using a css counter with 
   
 * And it's a wrap for now!
 
+* Another few days after - I was able to add the code to increase the timer by 10 seconds when the answer is correct, and decrease by 10 seconds if incorrect. However, I still can't resolve the problem of different initials in the highest scores list. Speak to a TA in office hours on Tuesday.
+
 ---
 
 ### Code Logic - What are we trying to do

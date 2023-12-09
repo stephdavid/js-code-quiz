@@ -31,29 +31,29 @@ function displayFiveHighestScores() {
 
     const initialsString = localStorage.getItem("initials");
     const initials = initialsString ? JSON.parse(initialsString) : [];
- 
+
     if (latestGameCount >= 5) {
         // Sort the array in descending order
         scores.sort((a, b) => b - a);
         // Remove the smallest value in the array
         scores.pop();
     }
-  
+
     // Update the highscore list
     if (scores[0]) {
         document.getElementById("highscore1").textContent = initials[0] + "-" + scores[0];
     }
     if (scores[1]) {
-        document.getElementById("highscore2").textContent = initials[0] + "-" + scores[1];
+        document.getElementById("highscore2").textContent = initials[1] + "-" + scores[1];
     }
     if (scores[2]) {
-        document.getElementById("highscore3").textContent = initials[0] + "-" + scores[2] || "";
+        document.getElementById("highscore3").textContent = initials[2] + "-" + scores[2] || "";
     }
     if (scores[3]) {
-        document.getElementById("highscore4").textContent = initials[0] + "-" + scores[3];
+        document.getElementById("highscore4").textContent = initials[3] + "-" + scores[3];
     }
     if (scores[4]) {
-        document.getElementById("highscore5").textContent = initials[0] + "-" + scores[4] || "";
+        document.getElementById("highscore5").textContent = initials[4] + "-" + scores[4] || "";
     }
 }
 // Call the function after retrieving local storage values
