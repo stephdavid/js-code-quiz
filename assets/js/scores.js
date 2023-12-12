@@ -32,28 +32,38 @@ function displayFiveHighestScores() {
     const initialsString = localStorage.getItem("initials");
     const initials = initialsString ? JSON.parse(initialsString) : [];
 
-    if (latestGameCount >= 5) {
-        // Sort the array in descending order
-        scores.sort((a, b) => b - a);
-        // Remove the smallest value in the array
-        scores.pop();
+    // Create an array of objects with initials and scores
+    const highscores = [];
+    for (let i=0; i < scores.length ; i++) {
+        
+            highscores.push({ initials: initials[i], score: scores[i] });
+ 
     }
 
+
+    if (latestGameCount >= 5) {
+        // Sort the array in descending order by score
+        highscores.sort((a, b) => b.score - a.score);
+        // Remove the smallest value in the array
+        highscores.pop();
+    }
+
+ console.log(highscores)
     // Update the highscore list
-    if (scores[0]) {
-        document.getElementById("highscore1").textContent = initials[0] + "-" + scores[0];
+    if (highscores[0]) {
+        document.getElementById("highscore1").textContent = highscores[0].initials + "-" + highscores[0].score;
     }
-    if (scores[1]) {
-        document.getElementById("highscore2").textContent = initials[1] + "-" + scores[1];
+    if (highscores[1]) {
+        document.getElementById("highscore2").textContent = highscores[1].initials + "-" + highscores[1].score;
     }
-    if (scores[2]) {
-        document.getElementById("highscore3").textContent = initials[2] + "-" + scores[2] || "";
+    if (highscores[2]) {
+        document.getElementById("highscore3").textContent = highscores[2].initials + "-" + highscores[2].score;
     }
-    if (scores[3]) {
-        document.getElementById("highscore4").textContent = initials[3] + "-" + scores[3];
+    if (highscores[3]) {
+        document.getElementById("highscore4").textContent = highscores[3].initials + "-" + highscores[3].score;
     }
-    if (scores[4]) {
-        document.getElementById("highscore5").textContent = initials[4] + "-" + scores[4] || "";
+    if (highscores[4]) {
+        document.getElementById("highscore5").textContent = highscores[4].initials + "-" + highscores[4].score;
     }
 }
 // Call the function after retrieving local storage values
